@@ -12,5 +12,14 @@ getURL = requests.get(url, headers=headers)
 website = bs(getURL.text, 'html.parser')
 html = website.find_all('table')[7]
 
+table = html.find_all('tr')
+#tableRow = table.find_all('td') Doesn't work.... Can;t be a search result
 
-print(html)
+
+for tr in table:
+	row = tr.find_all('td')
+	for ele in row:
+		print(ele.get_text())
+
+
+#print(html)
