@@ -13,5 +13,8 @@ website = bs(getURL.text, 'html.parser')
 html = website.find_all('span')
 
 price = html[27].get_text()
-change = gtml[28].get_text()
+change,percentChange = (html[28].get_text().replace("(","").replace(")","")).split(' ')
+print(price)
+print(change)
+print(percentChange)
 
