@@ -10,14 +10,17 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleW
 
 getURL = requests.get(url, headers=headers)
 website = bs(getURL.text, 'html.parser')
+# print(website.find('h1')) Find site doesn;t return this will say why... 
 html = website.find_all('table')[16]
 print(html)
 table = html.find_all('tr')
 chart = []
+
 for tr in table:
 	row = tr.find_all('td')
 	for ele in row:
-		chart.append(ele.find('a')[0].get_text())
+		print(ele.get_text())
+		print()
 print(chart)
 #for i in range(0,int(len(chart)/2), 2):
 #	globals()[chart[i]] = chart[i*+1]
