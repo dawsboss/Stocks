@@ -1,6 +1,8 @@
 # Stocks
 This will be used to keep track of owned and un-owned stocks
 
+***NOTE: On hold for freetime only, school is limiting***
+
 ## Input:
 * Ticker - ex. Ticker: XOM == Name: Exxon - This is the abreveation of the stock
 * Num of shares - ex. 50 - This number is the total number of stocks you own of this stock
